@@ -10,14 +10,20 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
-### Textures
+Features:
+  * Importing textures
+  * Scaling up sprites
+  * True sprite colors
+  * Pixelated font
 
-The only thing you need to check when importing your textures is that the **Texture Group** option is correctly set to
-**2D Pixels (unfiltered)**:
+### Importing textures
+
+The only thing you need to check when importing new textures is that the **Texture Group** option is correctly set to
+**2D Pixels (unfiltered)**. This will prevent the textures from being antialiased:
 
 ![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-texturegroup.png)
 
-### Scale up your sprites
+### Scaling up sprites
 
 Here is the charset used for Mario:
 
@@ -49,6 +55,23 @@ Controller->ConsoleCommand(TEXT("showflag.postprocessing 0"));
 ```
 
 Also, in **Project Settings > Engine > Rendering**, make sure to uncheck the **Mobile HDR** option and all post processing options such as **Bloom**, **Auto Exposure**, **Anti-Aliasing**, etc.
+
+## Pixelated font
+
+Importing a custom font to use in a TextRendererComponent seems complicated. This requires
+the **Font Cache Type** parameter of your font to be set to **Offline**. Next, make
+sure to uncheck the **Use Distance Field Alpha** option to prevent the font from becoming blurry:
+
+![UseDistanceField](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-usedistancefield.png)
+
+Also make sure to set the **Filter** as **Nearest** to prevent any antialiasing:
+
+![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-nearest.png)
+
+The last step is to create a new material to render the font. This can be done by copying the default material
+used by any TextRendererComponent and modifying it:
+
+![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-fontmaterial.png)
 
 ### Credits
 
