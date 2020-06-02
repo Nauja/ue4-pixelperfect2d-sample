@@ -12,7 +12,7 @@ pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
 ### Textures
 
-The only thing you need to check on imported textures is that the **Texture Group** option is correctly set to
+The only thing you need to check when importing your textures is that the **Texture Group** option is correctly set to
 **2D Pixels (unfiltered)**:
 
 ![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-texturegroup.png)
