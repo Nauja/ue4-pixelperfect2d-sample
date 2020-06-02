@@ -15,6 +15,7 @@ Features:
   * Scaling up sprites
   * True sprite colors
   * Pixelated font
+  * Orthographic camera
 
 ### Importing textures
 
@@ -73,7 +74,7 @@ used by any TextRendererComponent and modifying it:
 
 ![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-fontmaterial.png)
 
-### Orthographic
+### Orthographic camera
 
 This sample uses a static orthographic camera positioned at the center of the screen. The viewport as a resolution of
 **512x448** pixels, the double of the SNES screen resolution, then the **OrthoWidth** parameter must be set to **512** pixels:
