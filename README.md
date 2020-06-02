@@ -10,6 +10,12 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
+Features:
+  * Importing textures
+  * Scaling up sprites
+  * True sprite colors
+  * Pixelated font
+
 ### Importing textures
 
 The only thing you need to check when importing new textures is that the **Texture Group** option is correctly set to
