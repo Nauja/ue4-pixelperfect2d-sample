@@ -85,4 +85,5 @@ the **Aspect Ratio** parameter to **8/7**:
 ### Credits
 
 Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
+
 Font from [FontSpace](https://www.fontspace.com/atlantis-international-font-f31357).
