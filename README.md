@@ -7,10 +7,10 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 
 ![Preview](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/preview.gif)
 
-The sole purpose of this sample is to compile all the required config and common
-pitfalls to avoid to correctly render pixel perfect sprites with Paper2D.
+The sole purpose of this sample is to compile all the config required, and common
+pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
-### Pixel perfect sprites
+### Scale your sprites correctly
 
 Here is the charset used for Mario:
 
@@ -20,9 +20,9 @@ As you can see, the size of one frame is really small (16x32 pixels). If it were
 in UE4, then all your physics would have to be configured with unrealistic values and placing or moving
 Actors in the editor would become complicated due to their small size.
 
-So, the first important point is to configure our sprites with a **pixels per unit** value of **0.5**, which effectively make them scaled by two:
+So, it is important to configure our sprites with a **pixels per unit** value of **0.5**, which effectively make them scaled by two:
 
-![PixelsPerUnit](https://github.com/Nauja/ue4-chest2d-sample/raw/master/docs/pixelperfect_sprite.png)
+![PixelsPerUnit](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/pixelperfect_sprite.png)
 
 Finally, the **SideViewCameraComponent** is configured with an **OrthoWidth** of **1280** pixels in **ASampleCharacter.cpp**:
 
