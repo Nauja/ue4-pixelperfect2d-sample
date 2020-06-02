@@ -50,6 +50,23 @@ Controller->ConsoleCommand(TEXT("showflag.postprocessing 0"));
 
 Also, in **Project Settings > Engine > Rendering**, make sure to uncheck the **Mobile HDR** option and all post processing options such as **Bloom**, **Auto Exposure**, **Anti-Aliasing**, etc.
 
+## Pixelated font
+
+Importing a custom font to use in a TextRendererComponent seems complicated. This requires
+the **Font Cache Type** parameter of your font to be set to **Offline**. Next, make
+sure to uncheck the **Use Distance Field Alpha** option to prevent the font from becoming blurry:
+
+![UseDistanceField](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-usedistancefield.png)
+
+Also make sure to set the **Filter** as **Nearest** to prevent any antialiasing:
+
+![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-nearest.png)
+
+The last step is to create a new material to render the font. This can be done by copying the default material
+used by a TextRendererComponent and modifying it:
+
+![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-fontmaterial.png)
+
 ### Credits
 
 Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
