@@ -10,7 +10,7 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
-### Scale your sprites correctly
+### Scale up your sprites
 
 Here is the charset used for Mario:
 
@@ -32,6 +32,10 @@ SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Orthographic;
 SideViewCameraComponent->OrthoWidth = 1280.0f;
 SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 ```
+
+### Import settings
+
+wip
 
 ### True sprite colors
 
