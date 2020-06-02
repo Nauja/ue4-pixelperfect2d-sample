@@ -63,7 +63,7 @@ Also make sure to set the **Filter** as **Nearest** to prevent any antialiasing:
 ![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-nearest.png)
 
 The last step is to create a new material to render the font. This can be done by copying the default material
-used by a TextRendererComponent and modifying it:
+used by any TextRendererComponent and modifying it:
 
 ![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-fontmaterial.png)
 
