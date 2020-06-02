@@ -53,3 +53,4 @@ Also, in **Project Settings > Engine > Rendering**, make sure to uncheck the **M
 ### Credits
 
 Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
+Font from [FontSpace](https://www.fontspace.com/atlantis-international-font-f31357).
