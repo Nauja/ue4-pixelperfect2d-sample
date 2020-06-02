@@ -76,7 +76,7 @@ used by any TextRendererComponent and modifying it:
 
 ### Orthographic camera
 
-This sample uses a static orthographic camera positioned at the center of the screen. The viewport as a resolution of
+This sample uses a static orthographic camera positioned at the center of the screen. The viewport has a resolution of
 **512x448** pixels, the double of the SNES screen resolution, then the **OrthoWidth** parameter must be set to **512** pixels:
 
 ![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-camera.png)
