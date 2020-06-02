@@ -10,14 +10,14 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
-### Textures
+### Importing textures
 
-The only thing you need to check when importing your textures is that the **Texture Group** option is correctly set to
-**2D Pixels (unfiltered)**:
+The only thing you need to check when importing new textures is that the **Texture Group** option is correctly set to
+**2D Pixels (unfiltered)**. This will prevent the textures from being antialiased:
 
 ![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-texturegroup.png)
 
-### Scale up your sprites
+### Scaling up sprites
 
 Here is the charset used for Mario:
 
