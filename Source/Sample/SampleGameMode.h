@@ -18,4 +18,6 @@ class ASampleGameMode : public AGameModeBase
 	GENERATED_BODY()
 public:
 	ASampleGameMode();
+
+    virtual void BeginPlay() override;
 };
