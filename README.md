@@ -10,6 +10,13 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
+### Textures
+
+The only thing you need to check on imported textures is that the **Texture Group** option is correctly set to
+**2D Pixels (unfiltered)**:
+
+![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-texturegroup.png)
+
 ### Scale up your sprites
 
 Here is the charset used for Mario:
@@ -20,28 +27,19 @@ As you can see, the size of one frame is really small (16x32 pixels). If it were
 in UE4, then all your physics would have to be configured with unrealistic values and placing or moving
 Actors in the editor would become complicated due to their small size.
 
-So, it is important to configure our sprites with a **pixels per unit** value of **0.5**, which effectively make them scaled by two:
+In order to keep consistent units between the physics and the rendering, all sprites are configured with a **pixels per unit** value of **0.5**, which effectively make them scaled by two:
 
-![PixelsPerUnit](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/pixelperfect_sprite.png)
+![PixelsPerUnit](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsperunit.png)
 
-Finally, the **SideViewCameraComponent** is configured with an **OrthoWidth** of **1280** pixels in **ASampleCharacter.cpp**:
+This is how the level looks up in editor with this configuration. You can see it is neither too small nor too big:
 
-```cpp
-SideViewCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("SideViewCamera"));
-SideViewCameraComponent->ProjectionMode = ECameraProjectionMode::Orthographic;
-SideViewCameraComponent->OrthoWidth = 1280.0f;
-SideViewCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
-```
-
-### Import settings
-
-wip
+![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-preview.png)
 
 ### True sprite colors
 
-One common problem is that the colors of rendered sprites are altered by UE4's post processing effects.
+One common problem is that rendered colors are altered by UE4's post processing effects.
 By default, many post processing effects are enabled and are causing sprites
-not to be rendered correctly. In this sample, all post processing effects are disabled
+not to render correctly. In this sample, all post processing effects are disabled
 with this single command:
 
 ```cpp
