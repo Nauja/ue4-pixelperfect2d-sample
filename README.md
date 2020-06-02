@@ -56,7 +56,7 @@ Controller->ConsoleCommand(TEXT("showflag.postprocessing 0"));
 
 Also, in **Project Settings > Engine > Rendering**, make sure to uncheck the **Mobile HDR** option and all post processing options such as **Bloom**, **Auto Exposure**, **Anti-Aliasing**, etc.
 
-## Pixelated font
+### Pixelated font
 
 Importing a custom font to use in a TextRendererComponent seems complicated. This requires
 the **Font Cache Type** parameter of your font to be set to **Offline**. Next, make
@@ -72,6 +72,13 @@ The last step is to create a new material to render the font. This can be done b
 used by any TextRendererComponent and modifying it:
 
 ![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-fontmaterial.png)
+
+### Orthographic
+
+This sample uses a static orthographic camera positioned at the center of the screen. The viewport as a resolution of
+**512x448** pixels, the double of the SNES screen resolution, then the **OrthoWidth** parameter must be set to **512** pixels:
+
+![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-camera.png)
 
 ### Credits
 
