@@ -77,7 +77,7 @@ used by any TextRendererComponent and modifying it:
 
 ### Snap pixels to grid
 
-In retro games, all sprites were snapped to a pixel grid, ensuring each pixel fit in the grid and is correctly rendered.
+In retro games, all sprites were snapped to a pixel grid, ensuring each pixel fitted in the grid and was correctly rendered.
 In modern games, your Actors may be at positions containing float values, causing pixels to fall off the grid and render
 incorrectly. Here is an example of moving the same sprite without pixel snapping (left) and with pixel snapping (right):
 
