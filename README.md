@@ -15,6 +15,7 @@ Features:
   * Scaling up sprites
   * True sprite colors
   * Pixelated font
+  * Snap pixels to grid
   * Orthographic camera
 
 ### Importing textures
@@ -74,6 +75,21 @@ used by any TextRendererComponent and modifying it:
 
 ![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-fontmaterial.png)
 
+### Snap pixels to grid
+
+In retro games, all sprites were snapped to a pixel grid, ensuring each pixel fitted in the grid and was correctly rendered.
+In modern games, your Actors may be at positions containing float values, causing pixels to fall off the grid and render
+incorrectly. Here is an example of moving the same sprite without pixel snapping (left) and with pixel snapping (right):
+
+![PixelSnap](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsnap.gif)
+
+To do that, you can copy the default material used for sprites and modify it to offset the positions of vertex to make
+sure they fall correctly on the grid:
+
+![PixelSnapMaterial](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsnapmaterial.png)
+
+You can do the same for the font material, but by replacing the **PixelsPerUnit** parameter by **1**.
+
 ### Orthographic camera
 
 This sample uses a static orthographic camera positioned at the center of the screen. The expected resolution of our viewport is
@@ -87,3 +103,5 @@ the **Aspect Ratio** parameter to **8/7**:
 Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
 
 Font from [FontSpace](https://www.fontspace.com/atlantis-international-font-f31357).
+
+Pixel snap trick [Ludicrous Games](https://weareludicrous.com/blog/2018/3-tricks-to-improve-pixel-art-rendering-in-ue4/)
