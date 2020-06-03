@@ -83,7 +83,7 @@ incorrectly. Here is an example of moving the same sprite without pixel snapping
 
 ![PixelSnap](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsnap.gif)
 
-To do that, you can copy the default material used for sprites and modify it to offset the positions of vertex to make
+To do that, you can copy the default material used for sprites and modify it to offset vertex positions to make
 sure they fall correctly on the grid:
 
 ![PixelSnapMaterial](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsnapmaterial.png)
