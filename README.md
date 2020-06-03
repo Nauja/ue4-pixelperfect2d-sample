@@ -81,7 +81,7 @@ In retro games, all sprites were snapped to a pixel grid, ensuring each pixel fi
 In modern games, your Actors may be at positions containing float values, causing pixels to fall off the grid and render
 incorrectly. Here is an example of moving the same sprite without pixel snapping (left) and with pixel snapping (right):
 
-![PixelSnap](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsnap.png)
+![PixelSnap](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/master/docs/editor-pixelsnap.gif)
 
 To do that, you can copy the default material used for sprites and modify it to offset the positions of vertex to make
 sure they fall correctly on the grid:
