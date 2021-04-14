@@ -1,7 +1,7 @@
 # ue4-pixelperfect2d-sample
 
 ![UE4](https://img.shields.io/badge/UE4-4.25+-blue)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Nauja/ue4-jetpack-sample/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Nauja/ue4-pixelperfect2d-sample/master/LICENSE)
 
 Sample of coding a pixel perfect 2D game with Paper2D.
 
