@@ -10,22 +10,23 @@ Sample of coding a pixel perfect 2D game with Paper2D.
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
-Features:
-  * Importing textures
-  * Scaling up sprites
-  * True sprite colors
-  * Pixelated font
-  * Snap pixels to grid
-  * Orthographic camera
+## Table of contents:
 
-### Importing textures
+- [Importing textures](#importing-textures)
+- [Scaling up sprites](#scaling-up-sprites)
+- [True sprite colors](#true-sprite-colors)
+- [Pixelated font](#pixelated-font)
+- [Snap pixels to grid](#snap-pixels-to-grid)
+- [Orthographic camera](#orthographic-camera)
+
+## Importing textures
 
 The only thing you need to check when importing new textures is that the **Texture Group** option is correctly set to
 **2D Pixels (unfiltered)**. This will prevent the textures from being antialiased:
 
 ![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-texturegroup.png)
 
-### Scaling up sprites
+## Scaling up sprites
 
 Here is the charset used for Mario:
 
@@ -43,7 +44,7 @@ This is how the level looks up in editor with this configuration. You can see it
 
 ![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-preview.png)
 
-### True sprite colors
+## True sprite colors
 
 One common problem is that rendered colors are altered by UE4's post processing effects.
 By default, many post processing effects are enabled and are causing sprites
@@ -58,7 +59,7 @@ Controller->ConsoleCommand(TEXT("showflag.postprocessing 0"));
 
 Also, in **Project Settings > Engine > Rendering**, make sure to uncheck the **Mobile HDR** option and all post processing options such as **Bloom**, **Auto Exposure**, **Anti-Aliasing**, etc.
 
-### Pixelated font
+## Pixelated font
 
 Importing a custom font to use in a TextRendererComponent seems complicated. This requires
 the **Font Cache Type** parameter of your font to be set to **Offline**. Next, make
@@ -75,7 +76,7 @@ used by any TextRendererComponent and modifying it:
 
 ![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-fontmaterial.png)
 
-### Snap pixels to grid
+## Snap pixels to grid
 
 In retro games, all sprites were snapped to a pixel grid, ensuring each pixel fitted in the grid and was correctly rendered.
 In modern games, your Actors may be at positions containing float values, causing pixels to fall off the grid and render
@@ -90,7 +91,7 @@ sure they fall correctly on the grid:
 
 You can do the same for the font material, but by replacing the **PixelsPerUnit** parameter by **1**.
 
-### Orthographic camera
+## Orthographic camera
 
 This sample uses a static orthographic camera positioned at the center of the screen. The expected resolution of our viewport is
 **512x448** pixels, the double of the SNES screen resolution, that's why the **OrthoWidth** parameter must be set to **512** pixels and
@@ -98,7 +99,7 @@ the **Aspect Ratio** parameter to **8/7**:
 
 ![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-camera.png)
 
-### Credits
+## Credits
 
 Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
 
