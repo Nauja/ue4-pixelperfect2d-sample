@@ -5,10 +5,12 @@
 
 Sample of coding a pixel perfect 2D game with Paper2D.
 
-![Preview](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/preview.gif)
+![Preview](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/preview.gif)
 
 The sole purpose of this sample is to compile all the config required, and common
 pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
+
+For an Unreal Engine 5 version, check the branch [ue5.2](https://github.com/Nauja/ue4-pixelperfect2d-sample/tree/ue5.2).
 
 ## Table of contents:
 
@@ -24,7 +26,7 @@ pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 The only thing you need to check when importing new textures is that the **Texture Group** option is correctly set to
 **2D Pixels (unfiltered)**. This will prevent the textures from being antialiased:
 
-![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-texturegroup.png)
+![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-texturegroup.png)
 
 ## Scaling up sprites
 
@@ -38,11 +40,11 @@ Actors in the editor would become complicated due to their small size.
 
 In order to keep consistent units between the physics and the rendering, all sprites are configured with a **pixels per unit** value of **0.5**, which effectively make them scaled by two:
 
-![PixelsPerUnit](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-pixelsperunit.png)
+![PixelsPerUnit](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-pixelsperunit.png)
 
 This is how the level looks up in editor with this configuration. You can see it is neither too small nor too big:
 
-![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-preview.png)
+![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-preview.png)
 
 ## True sprite colors
 
@@ -65,16 +67,16 @@ Importing a custom font to use in a TextRendererComponent seems complicated. Thi
 the **Font Cache Type** parameter of your font to be set to **Offline**. Next, make
 sure to uncheck the **Use Distance Field Alpha** option to prevent the font from becoming blurry:
 
-![UseDistanceField](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-usedistancefield.png)
+![UseDistanceField](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-usedistancefield.png)
 
 Also make sure to set the **Filter** as **Nearest** to prevent any antialiasing:
 
-![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-nearest.png)
+![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-nearest.png)
 
 The last step is to create a new material to render the font. This can be done by copying the default material
 used by any TextRendererComponent and modifying it:
 
-![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-fontmaterial.png)
+![Nearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-fontmaterial.png)
 
 ## Snap pixels to grid
 
@@ -82,12 +84,12 @@ In retro games, all sprites were snapped to a pixel grid, ensuring each pixel fi
 In modern games, your Actors may be at positions containing float values, causing pixels to fall off the grid and render
 incorrectly. Here is an example of moving the same sprite without pixel snapping (left) and with pixel snapping (right):
 
-![PixelSnap](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-pixelsnap.gif)
+![PixelSnap](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-pixelsnap.gif)
 
 To do that, you can copy the default material used for sprites and modify it to offset vertex positions to make
 sure they fall correctly on the grid:
 
-![PixelSnapMaterial](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-pixelsnapmaterial.png)
+![PixelSnapMaterial](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-pixelsnapmaterial.png)
 
 You can do the same for the font material, but by replacing the **PixelsPerUnit** parameter by **1**.
 
@@ -97,7 +99,7 @@ This sample uses a static orthographic camera positioned at the center of the sc
 **512x448** pixels, the double of the SNES screen resolution, that's why the **OrthoWidth** parameter must be set to **512** pixels and
 the **Aspect Ratio** parameter to **8/7**:
 
-![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media/editor-camera.png)
+![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media4.25/editor-camera.png)
 
 ## Credits
 
