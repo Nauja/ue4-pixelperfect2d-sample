@@ -12,6 +12,11 @@ pitfalls to avoid, to correctly render pixel perfect sprites with Paper2D.
 
 For an Unreal Engine 4 version, check the branch [ue4.25](https://github.com/Nauja/ue4-pixelperfect2d-sample/tree/ue4.25).
 
+Go further:
+
+  * [Climb System 2D Sample](https://github.com/Nauja/ue4-climb2d-sample)
+  * [Interactable Chest 2D Sample](https://github.com/Nauja/ue4-chest2d-sample)
+
 ## Table of contents:
 
 - [Importing textures](#importing-textures)
