@@ -128,14 +128,6 @@ the **Aspect Ratio** parameter to **8/7**:
 
 ![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-camera.png)
 
-## Credits
-
-Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
-
-Font from [FontSpace](https://www.fontspace.com/atlantis-international-font-f31357).
-
-Pixel snap trick [Ludicrous Games](https://weareludicrous.com/blog/2018/3-tricks-to-improve-pixel-art-rendering-in-ue4/)
-
 ## Revisions
 
 ### 2023/11/14:
@@ -144,6 +136,14 @@ Pixel snap trick [Ludicrous Games](https://weareludicrous.com/blog/2018/3-tricks
   the game being crisp in PIE.
 * Replaced **ConsoleCommand** by creating a custom **UGameViewportClient** class to disable the flag as console commands
   are disabled in shipping builds.
+
+## Credits
+
+Sprites are coming from [The Spriters Resource](https://www.spriters-resource.com/).
+
+Font from [FontSpace](https://www.fontspace.com/atlantis-international-font-f31357).
+
+Pixel snap trick [Ludicrous Games](https://weareludicrous.com/blog/2018/3-tricks-to-improve-pixel-art-rendering-in-ue4/)
 
 ## License
 
