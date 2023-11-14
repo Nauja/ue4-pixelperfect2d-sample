@@ -73,7 +73,7 @@ void USampleGameViewportClient::Activated(FViewport* InViewport, const FWindowAc
 }
 ```
 
-The custom game viewport client can be configured in **Project Settings > Engine > General Settings**:
+The custom **UGameViewportClient** class can be configured in **Project Settings > Engine > General Settings**:
 
 ![GameViewportClient](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-gameviewportclient.png)
 
