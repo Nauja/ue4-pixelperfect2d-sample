@@ -136,7 +136,7 @@ Font from [FontSpace](https://www.fontspace.com/atlantis-international-font-f313
 
 Pixel snap trick [Ludicrous Games](https://weareludicrous.com/blog/2018/3-tricks-to-improve-pixel-art-rendering-in-ue4/)
 
-## Revision
+## Revisions
 
 ### 2023/11/14:
 
