@@ -8,8 +8,6 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 
-DEFINE_LOG_CATEGORY_STATIC(SideScrollerCharacter, Log, All);
-
 //////////////////////////////////////////////////////////////////////////
 // ASampleCharacter
 
