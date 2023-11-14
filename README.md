@@ -31,7 +31,11 @@ Go further:
 When importing new textures, check that the **Texture Group** option is correctly set to
 **2D Pixels (unfiltered)**, and that the **Compression Settings** is set to **UserInterface2D (RGBA)**. This will prevent the textures from being antialiased:
 
-![LevelEditor](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-texturegroup.png)
+![TextureGroup](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-texturegroup.png)
+
+Also, expand the **Advanced** section, and set the **Filter** option to **Nearest**:
+
+![SpriteNearest](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-sprite-nearest.png)
 
 ## Scaling up sprites
 
@@ -56,7 +60,25 @@ This is how the level looks up in editor with this configuration. You can see it
 One common problem is that rendered colors are altered by UE5's post processing effects.
 By default, many post processing effects are enabled and are causing sprites
 not to render correctly. In this sample, all post processing effects are disabled
-with this single command:
+by setting **EngineShowFlags.PostProcessing** to **0** with a custom **UGameViewportClient**
+class:
+
+```cpp
+void USampleGameViewportClient::Activated(FViewport* InViewport, const FWindowActivateEvent& InActivateEvent)
+{
+    Super::Activated(InViewport, InActivateEvent);
+    
+    // Disable post processing effects when the viewport is activated
+    EngineShowFlags.PostProcessing = 0;
+}
+```
+
+The custom **UGameViewportClient** class can be configured in **Project Settings > Engine > General Settings**:
+
+![GameViewportClient](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-gameviewportclient.png)
+
+Another possibility is to execute the following console command, however it turns out that it doesn't
+work in shipping builds where console commands are disabled:
 
 ```cpp
 APlayerController* Controller = UGameplayStatics::GetPlayerController(GetWorld(), 0);
@@ -105,6 +127,15 @@ This sample uses a static orthographic camera positioned at the center of the sc
 the **Aspect Ratio** parameter to **8/7**:
 
 ![Camera](https://github.com/Nauja/ue4-pixelperfect2d-sample/raw/media5.2/editor-camera.png)
+
+## Revisions
+
+### 2023/11/14:
+
+* Added a step to set the **Filter** option to **Nearest** on sprites. Without that, the game build was all blurry despite
+  the game being crisp in PIE.
+* Replaced **ConsoleCommand** by creating a custom **UGameViewportClient** class to disable the flag as console commands
+  are disabled in shipping builds.
 
 ## Credits
 
